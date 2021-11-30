@@ -1,6 +1,6 @@
-import { Text, VStack, Image, useColorMode, IconButton, HStack, Link, Divider, Container } from '@chakra-ui/react';
+import { Text, VStack, Image, useColorMode, IconButton, HStack, Link, Divider, Container, Button } from '@chakra-ui/react';
 import Header from './components/Header'
-import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMoon, FaSun, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMoon, FaSun, FaTwitter, FaDownload } from 'react-icons/fa'
 
 function App() {
 
@@ -11,15 +11,23 @@ function App() {
     return ((expDiffMs / 1000) / 31540000).toFixed(1)
   }
 
+  const downloadResume = () => {
+    window.location.href = "/JeffrinJerome_Resume.pdf"
+  }
+
   return (
     <>
       <VStack alignSelf="flex-start" p="4">
-        <IconButton
-          aria-label="Toggle dark/light mode"
-          icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
-          alignSelf="flex-end"
-          onClick={toggleColorMode}
-        />
+        <HStack alignSelf="flex-end">
+          <Button onClick={downloadResume} rightIcon={<FaDownload />}>
+            Resume
+          </Button>
+          <IconButton
+            aria-label="Toggle dark/light mode"
+            icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
+            onClick={toggleColorMode}
+          />
+        </HStack>
         <Header title="Hey. Hi. Hello." />
         <Text
           fontWeight="medium"
