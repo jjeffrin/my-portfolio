@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react';
+import AppNew from './AppNew';
+
+const appTheme = extendTheme({
+  fonts: {
+    'body': "Inter",
+    "heading": "Inter"
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={appTheme}>
       <ColorModeScript initialColorMode="system" />
-      <App />
+      <AppNew />
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
