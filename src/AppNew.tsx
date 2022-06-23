@@ -1,6 +1,5 @@
-import { Text, VStack, Image, useColorMode, IconButton, HStack, Link, Divider, Container, Button, Heading, Box, Flex, Spacer, Grid, SlideFade, UnorderedList, ListItem, List, ListIcon, Icon } from '@chakra-ui/react';
-import Header from './components/Header'
-import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMoon, FaSun, FaTwitter, FaDownload, FaFacebook, FaReact } from 'react-icons/fa'
+import { Text, Image, useColorMode, IconButton, HStack, Link, Divider, Container, Button, Heading, SlideFade, Icon } from '@chakra-ui/react';
+import { FaEnvelope, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaMoon, FaSun, FaTwitter, FaReact } from 'react-icons/fa'
 
 import { SiChakraui } from 'react-icons/si'
 import Typewriter from 'typewriter-effect';
@@ -65,6 +64,7 @@ function AppNew() {
           </Heading>
           <IconButton
             aria-label="Toggle dark/light mode"
+            size={'sm'}
             icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
             colorScheme={colorMode === "light" ? 'gray' : 'blue'}
             onClick={toggleColorMode}
@@ -87,48 +87,6 @@ function AppNew() {
         <Divider my={8} />
 
         <Text fontSize={'sm'} mt={2} fontWeight={'medium'} color='gray.500'> also, I explore other frameworks, for use in my personal projects, during off hours. Recent works involve using Blazor and React ✨</Text>
-
-        {/* <Divider my={8} /> */}
-
-        {/* <HStack my={8} borderRadius={16} backgroundColor={'gray.100'} px={8} py={4} display="flex" alignItems={'center'} justifyContent={'space-evenly'}>
-          <Image
-            borderRadius="full"
-            boxSize="150px"
-            src="/Reebok_Profile.jpg"
-            alt="Jeffrin J"
-          />
-          <List spacing={3}>
-            <ListItem>
-              <ListIcon as={FaInstagram} />
-              <Link href="https://www.instagram.com/jjeffrin/">instagram</Link>
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaTwitter} />
-              <Link href="https://twitter.com/jjeffrin">twitter</Link>
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaFacebook} />
-              <Link href="https://www.facebook.com/profile.php?id=100009318853280">facebook</Link>
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaLinkedinIn} />
-              <Link href="https://www.linkedin.com/in/jeffrin-j">linkedin</Link>
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaGithub} />
-              <Link href="https://github.com/jjeffrin">github</Link>
-            </ListItem>
-            <ListItem>
-              <ListIcon as={FaEnvelope} />
-              <Link href="mailto:jjeffrin@gmail.com">mail</Link>
-            </ListItem>
-          </List>
-        </HStack> */}
-
-        {/* <HStack w={'100%'} h={'100%'} justifyContent={'center'} alignItems={'center'}>
-          <Text h={'100%'} textAlign={'center'} mt={2} fontWeight={'medium'} color='gray.500'>this site is made using</Text>
-          <FaReact />
-        </HStack> */}
 
         <HStack mt={8} justifyContent={'center'}>
 
@@ -184,7 +142,7 @@ function AppNew() {
 
         </HStack>
 
-        <HStack my={4} justifyContent={'center'} colorScheme={colorMode === "light" ? 'gray' : 'blue'}>
+        <HStack my={4} justifyContent={'center'}>
           <Text fontSize={'sm'} fontWeight={'medium'} color='gray.500'>made using</Text>
           <Icon color={colorMode === "light" ? 'gray.500' : 'white'} as={FaReact} />
           <Text fontSize={'sm'} fontWeight={'medium'} color='gray.500'>and</Text>
