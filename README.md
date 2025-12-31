@@ -1,3 +1,5 @@
+# I'm archiving this repo. As I've created [my-portfolio-v2](https://github.com/jjeffrin/my-portfolio-v2)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
